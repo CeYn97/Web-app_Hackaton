@@ -35,16 +35,16 @@ function handleSubmit(event) {
     .then((result) => {
       const { qrStatus, qrId } = result;
       if (qrStatus === "PAID") {
-        location.replace("./Web-app_Hackaton/html/paid.html");
+        location.replace("./html/paid.html");
       } else if (qrStatus === "NEW") {
-        location.replace("./Web-app_Hackaton/html/not_paid.html");
+        location.replace("./html/not_paid.html");
       }
     })
     .catch((error) => {
       if (error === "QR-код не найден") {
-        location.replace("./Web-app_Hackaton/html/404.html");
+        location.replace("./html/404.html");
       } else {
-        location.replace("./Web-app_Hackaton/html/not_paid.html");
+        location.replace("./html/not_paid.html");
       }
       // content.textContent = error;
     });
